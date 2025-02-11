@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Task",
+  "description": "Schema for a task document in the tasks collection",
+  "type": "object",
+  "required": [
+    "completed",
+    "created",
+    "details",
+    "title",
+    "user",
+    "place"
+  ],
+  "properties": {
+    "completed": {
+      "type": "boolean",
+      "description": "Task completion status"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Task creation timestamp in UTC"
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional details or description of the task"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Main title of the task"
+    },
+    "user": {
+      "type": "string",
+      "pattern": "^/users/[A-Za-z0-9]{28}$",
+      "description": "Reference to the user document in the users collection"
+    },
+    "place": {
+      "type": "string",
+      "description": "Database location identifier"
+    }
+  },
+  "additionalProperties": false
+}
