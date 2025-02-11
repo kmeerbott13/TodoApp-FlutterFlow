@@ -75,13 +75,19 @@ class _LoginWidgetState extends State<LoginWidget>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8.0),
-                  child: Image.asset(
-                    'assets/images/DALLE_2025-02-09_17.46.18_-_A_modern,_minimalist_logo_for_a_task_tracking_app,_occupying_the_entire_image._The_design_features_a_bold_checkmark_inside_a_sleek,_circular_or_square.webp',
-                    width: 120.0,
-                    fit: BoxFit.contain,
-                  ),
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset(
+                        'assets/images/DALLE_2025-02-09_17.46.18_-_A_modern,_minimalist_logo_for_a_task_tracking_app,_occupying_the_entire_image._The_design_features_a_bold_checkmark_inside_a_sleek,_circular_or_square.webp',
+                        width: 120.0,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ],
                 ),
                 Container(
                   height: 352.3,
