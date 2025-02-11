@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User",
+  "description": "Schema for a user document in the users collection",
+  "type": "object",
+  "required": [
+    "birthday",
+    "created_time",
+    "display_name",
+    "email",
+    "photo_url",
+    "uid"
+  ],
+  "properties": {
+    "birthday": {
+      "type": "string",
+      "format": "date-time",
+      "description": "User's birthday as UTC timestamp"
+    },
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Account creation timestamp in UTC"
+    },
+    "display_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "User's display name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "User's email address"
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to user's profile photo in Firebase Storage"
+    },
+    "uid": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]{28}$",
+      "description": "Firebase unique user identifier"
+    }
+  },
+  "additionalProperties": false
+}
